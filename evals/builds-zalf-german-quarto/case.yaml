@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: builds-zalf-german-quarto
+expected_outcome: |
+  A Quarto deck scaffolded with scripts/new_reveal_deck.py: slides.qmd with format zalf-iat-revealjs, deck-brand zalf, deck-audience internal, lang de; German slide text in a factual register; the supplied image credited as AI-generated; the linter reporting no FAIL.
+context:
+  scaffold_script: place-files.sh

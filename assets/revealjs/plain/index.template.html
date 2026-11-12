@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="{{LANG}}" data-brand="{{BRAND}}" data-audience="{{AUDIENCE}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{TITLE}}</title>
+  <meta name="author" content="{{AUTHORS}}">
+  <link rel="stylesheet" href="vendor/reveal/dist/reset.css">
+  <link rel="stylesheet" href="vendor/reveal/dist/reveal.css">
+  <link rel="stylesheet" href="theme/zalf-iat.css">
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- Title slide: the institutional frame. Change text only. -->
+<section class="zi-title">
+  <div class="ts-header">
+    <div class="ts-institution">
+      <span class="l-en">Leibniz Centre for Agricultural Landscape Research (ZALF)</span>
+      <span class="l-de">Leibniz-Zentrum f&uuml;r Agrarlandschaftsforschung (ZALF) e.&nbsp;V.</span>
+    </div>
+    <img class="ts-logo only-iat" src="theme/assets/zalf-iat.png" alt="ZALF IAT">
+    <img class="ts-logo only-zalf" src="theme/assets/zalf.png" alt="ZALF">
+  </div>
+  <div class="ts-hero no-image">
+    <div class="ts-panel">
+      <h1 class="title">{{TITLE}}</h1>
+{{SUBTITLE_BLOCK}}
+      <p class="authors">{{AUTHORS}}</p>
+{{DATE_BLOCK}}
+    </div>
+  </div>
+  <div class="ts-footer">
+    <div class="ts-group only-iat">
+      <p class="ts-label"><span class="l-en">IAT partners:</span><span class="l-de">IAT-Partner:</span></p>
+      <div class="ts-logos">
+        <img class="lg-kassel" src="theme/assets/partners/kassel.png" alt="Universität Kassel">
+        <img class="lg-giessen" src="theme/assets/partners/giessen.png" alt="Justus-Liebig-Universität Gießen">
+        <img class="lg-geisenheim" src="theme/assets/partners/geisenheim.png" alt="Hochschule Geisenheim University">
+      </div>
+    </div>
+    <div class="ts-group only-zalf"></div>
+    <div class="ts-right">
+      <div class="ts-group only-iat">
+        <p class="ts-label">&nbsp;</p>
+        <div class="ts-logos"><img class="lg-leibniz" src="theme/assets/leibniz.png" alt="Leibniz-Gemeinschaft"></div>
+      </div>
+      <div class="ts-group only-external">
+        <p class="ts-label"><span class="l-en">Funded by:</span><span class="l-de">Gef&ouml;rdert durch:</span></p>
+        <div class="ts-logos">
+          <img class="lg-bmel" src="theme/assets/funders/bmel.png" alt="Federal Ministry of Agriculture, Food and Regional Identity">
+          <img class="lg-brandenburg" src="theme/assets/funders/brandenburg.png" alt="Land Brandenburg">
+          <img class="lg-hessen only-iat" src="theme/assets/funders/hessen.png" alt="Land Hessen">
+        </div>
+      </div>
+    </div>
+{{AI_BLOCK}}
+  </div>
+</section>
+
+<!-- Content slide: the <h2> is the slide title. -->
+<section>
+  <h2>Slide title stating the finding</h2>
+  <p>Body text.</p>
+  <aside class="notes">Speaker notes.</aside>
+</section>
+
+<!-- Closing slide -->
+<section class="zi-closing">
+  <h2><span class="l-en">Thank you for your attention.</span><span class="l-de">Vielen Dank f&uuml;r Ihre Aufmerksamkeit.</span></h2>
+  <p><span class="l-en">Contact:</span><span class="l-de">Kontakt:</span> {{CONTACT}}</p>
+</section>
+
+</div>
+</div>
+<script src="vendor/reveal/dist/reveal.js"></script>
+<script src="vendor/reveal/plugin/notes/notes.js"></script>
+<script>
+  Reveal.initialize({
+    width: 1280, height: 720, margin: 0, center: false,
+    controls: false, progress: true, slideNumber: "c/t", hash: true,
+    transition: "none", plugins: [RevealNotes]
+  });
+</script>
+</body>
+</html>

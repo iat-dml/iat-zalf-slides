@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: asks-before-building
+expected_outcome: |
+  The assistant asks, in one round, for the design (IAT or ZALF), language, audience (internal or external), format, title and authors, and does not build a deck before the user answers.

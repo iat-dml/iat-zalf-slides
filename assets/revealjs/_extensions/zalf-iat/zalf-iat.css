@@ -1,0 +1,251 @@
+/* ============================================================
+   zalf-iat.css  -  reveal.js theme for IAT and ZALF slide decks.
+
+   One stylesheet for both routes: the Quarto extension loads it through
+   `css:`, a plain reveal.js deck links it directly. Designed for a
+   1280 x 720 deck with `margin: 0` and `center: false`.
+
+   The title slide mirrors the institutional PowerPoint templates (white
+   header / green hero / logo footer). Content, divider and closing slides
+   follow the existing IAT and ZALF reveal.js decks: no banner, a small
+   corner mark, full-gradient dividers and closing slide.
+
+   Switches, all set as attributes on <html>:
+     data-brand="iat" | "zalf"            logos, partner row, corner mark
+     data-audience="internal" | "external" funder logos on the title slide
+     lang="en" | "de"                      title-slide labels
+   ============================================================ */
+
+:root {
+  /* Brand palette (_brand.yml of the IAT and ZALF Quarto templates) */
+  --zi-teal-dark:   #356259;   /* primary; headings, links, table rules */
+  --zi-green:       #46A84F;   /* ZALF green; use for large shapes, not small text */
+  --zi-teal:        #36AE6C;
+  --zi-green-mid:   #80BDBD;
+  --zi-green-light: #9EBC83;
+  --zi-olive:       #B1BE4D;
+  --zi-sage:        #657A4E;
+  --zi-slate:       #465555;
+  /* IAT service colours; the -ink variants clear 4.5:1 as text on white */
+  --zi-support:         #2D6A4F;
+  --zi-transfer:        #458484;
+  --zi-integration:     #C18F59;
+  --zi-transfer-ink:    #3E7777;
+  --zi-integration-ink: #906436;
+  /* Neutrals */
+  --zi-ink:   #111111;
+  --zi-gray:  #6C6C6C;
+  --zi-rule:  #D9DDDB;
+  --zi-tint:  #F3F5F4;
+  /* Hero gradient, sampled from the template artwork */
+  --zi-gradient: linear-gradient(90deg, #326158 0%, #35554D 50%, #39463E 100%);
+
+  --zi-font: "Segoe UI", system-ui, "Helvetica Neue", Arial, sans-serif;
+  --zi-mono: "Cascadia Mono", Consolas, ui-monospace, monospace;
+
+  --zi-pad-x: 56px;
+
+  --r-background-color: #FFFFFF;
+  --r-main-font: var(--zi-font);
+  --r-heading-font: var(--zi-font);
+  --r-main-color: var(--zi-ink);
+  --r-heading-color: var(--zi-teal-dark);
+  --r-link-color: var(--zi-teal-dark);
+  --r-main-font-size: 28px;
+}
+
+/* -- Switches ------------------------------------------------ */
+
+html:not([data-brand="iat"]) .only-iat,
+html[data-brand="iat"] .only-zalf,
+html:not([data-audience="external"]) .only-external,
+html[lang^="de"] .l-en,
+html:not([lang^="de"]) .l-de { display: none !important; }
+
+/* -- Base type ----------------------------------------------- */
+
+.reveal,
+.reveal .slides {
+  font-family: var(--zi-font);
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--zi-ink);
+  text-align: left;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+  font-family: var(--zi-font);
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  text-shadow: none;
+  line-height: 1.2;
+}
+
+.reveal h3 { font-size: 28px; color: var(--zi-teal-dark); margin: 0 0 12px; }
+.reveal h4 { font-size: 24px; color: var(--zi-ink); margin: 0 0 8px; }
+
+.reveal p { margin: 0 0 16px; line-height: 1.35; }
+.reveal strong, .reveal b { font-weight: 600; }
+.reveal a { color: var(--zi-teal-dark); text-decoration: underline; text-underline-offset: 0.12em; }
+
+.reveal ul, .reveal ol { display: block; margin: 0 0 16px 1.1em; padding: 0; }
+.reveal ul { list-style: square; }
+.reveal li { margin: 0 0 10px; line-height: 1.3; }
+.reveal li::marker { color: var(--zi-green-light); }
+.reveal ol li::marker { color: var(--zi-teal-dark); font-weight: 600; }
+.reveal ul ul, .reveal ol ol, .reveal ul ol, .reveal ol ul { margin-top: 8px; font-size: 0.86em; }
+
+.reveal .small { font-size: 22px; }
+
+.reveal blockquote {
+  width: auto; margin: 0 0 16px; padding: 0 0 0 1.2em;
+  border: 0; box-shadow: none; background: none;
+  color: var(--zi-slate); font-style: normal;
+}
+
+.reveal code { font-family: var(--zi-mono); font-size: 0.86em; }
+.reveal pre { width: 100%; margin: 0 0 16px; box-shadow: none; font-size: 20px; }
+.reveal pre code { padding: 14px 18px; background: var(--zi-tint); color: var(--zi-ink); max-height: 460px; }
+
+/* -- Figures, tables, sources -------------------------------- */
+
+.reveal section img, .reveal section video { max-width: 100%; height: auto; margin: 0; border: 0; box-shadow: none; }
+.reveal figure { margin: 0 0 12px; }
+.reveal figcaption, .reveal .caption, .reveal .credit,
+.reveal .quarto-figure figcaption { font-size: 18px; line-height: 1.3; color: var(--zi-gray); margin: 6px 0 0; text-align: left; }
+
+.reveal table { border-collapse: collapse; font-size: 22px; margin: 0 0 16px; }
+.reveal table th, .reveal table td { padding: 8px 16px 8px 0; text-align: left; border: 0; border-bottom: 1px solid var(--zi-rule); }
+.reveal table th { font-weight: 600; border-bottom: 2px solid var(--zi-teal-dark); }
+.reveal table td.num, .reveal table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Quarto columns: keep a gutter between them. */
+.reveal .columns > .column { box-sizing: border-box; padding-right: 36px; }
+.reveal .columns > .column:last-child { padding-right: 0; }
+
+/* Source line for data and figures: bottom left, above the slide number. */
+.reveal .source {
+  position: absolute; left: var(--zi-pad-x); bottom: 44px; margin: 0;
+  max-width: 1000px; font-size: 16px; line-height: 1.25; color: var(--zi-gray);
+}
+
+/* -- Content slides ------------------------------------------ */
+/* As in the existing IAT and ZALF reveal.js decks (zalf-rdm-system,
+   iat-data-policy, IAT Statusseminar 2026): no banner. The slide title is a
+   dark-teal heading on white, the institution's mark sits small in the
+   bottom-right corner, the slide number bottom left. */
+
+.reveal .slides > section:not(.stack),
+.reveal .slides > section > section {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  top: 0 !important;
+  padding: 44px var(--zi-pad-x) 72px;
+}
+
+.reveal .slides section:not(.zi-title):not(.zi-divider):not(.zi-closing):not(.title-slide) > h2 {
+  margin: 0 0 28px; max-width: 1060px;
+  color: var(--zi-teal-dark); font-size: 38px; font-weight: 600; line-height: 1.15;
+}
+
+/* Corner mark: ZALF, or ZALF-IAT for IAT decks. Not on the title slide,
+   dividers, the closing slide or full-canvas slides. */
+.reveal .slides section:not(.stack):not(.zi-title):not(.zi-divider):not(.zi-closing):not(.title-slide):not(.zi-plain)::after {
+  content: "";
+  position: absolute; right: 24px; bottom: 14px; width: 44px; height: 44px;
+  background: url("assets/zalf.png") center / contain no-repeat;
+}
+html[data-brand="iat"] .reveal .slides section:not(.stack):not(.zi-title):not(.zi-divider):not(.zi-closing):not(.title-slide):not(.zi-plain)::after {
+  width: 48px; height: 48px; bottom: 12px;
+  background-image: url("assets/zalf-iat.png");
+}
+
+/* .zi-plain: full canvas, no mark (full-bleed figure, video). */
+.reveal .slides section.zi-plain { padding: 0; }
+
+/* -- Section dividers and the closing slide ------------------ */
+/* Full-canvas hero gradient, white text.
+   Divider    Quarto: a level-1 heading. Plain: <section class="zi-divider"><h1>.
+   Closing    Quarto: ## Thank you ... {.zi-closing}. Plain: <section class="zi-closing"><h2>. */
+
+.reveal .slides section.zi-divider,
+.reveal .slides section.zi-closing,
+.reveal .slides section.title-slide:not(.zi-title) {
+  padding: 270px var(--zi-pad-x) 0;
+  background: url("assets/title-background-block.png") center / 100% 100% no-repeat, var(--zi-gradient);
+  color: #FFFFFF;
+}
+.reveal .slides section.zi-divider h1,
+.reveal .slides section.zi-closing h2,
+.reveal .slides section.title-slide:not(.zi-title) h1 { margin: 0 0 14px; font-size: 48px; color: #FFFFFF; }
+.reveal .slides section.zi-divider p,
+.reveal .slides section.zi-closing p,
+.reveal .slides section.title-slide:not(.zi-title) p { font-size: 26px; color: rgba(255, 255, 255, 0.92); max-width: 900px; }
+.reveal .slides section.zi-closing a { color: #FFFFFF; }
+
+/* -- Title slide --------------------------------------------- */
+
+.reveal .slides section.zi-title { padding: 0; background: #FFFFFF; color: var(--zi-ink); text-align: left; }
+.reveal .zi-title h1, .reveal .zi-title p { text-align: left; }
+.reveal .zi-title img { margin: 0; max-width: none; max-height: none; }
+
+.zi-title .ts-header {
+  height: 152px; box-sizing: border-box; padding: 0 20px 0 60px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.zi-title .ts-institution { font-size: 25px; line-height: 1.2; color: #000000; }
+.reveal .zi-title .ts-logo { height: 132px; width: auto; }
+.reveal .zi-title .ts-logo.only-iat { height: 104px; margin-right: 24px; }
+
+.zi-title .ts-hero {
+  height: 392px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  background: url("assets/title-background-block.png") center / 100% 100% no-repeat, var(--zi-gradient);
+}
+.zi-title .ts-hero.no-image { grid-template-columns: minmax(0, 1fr); }
+.zi-title .ts-panel {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 0 40px 0 60px; color: #FFFFFF;
+}
+.reveal .zi-title .title { margin: 0; font-size: 40px; font-weight: 600; line-height: 1.15; color: #FFFFFF; }
+.reveal .zi-title .subtitle { margin: 14px 0 0; font-size: 24px; line-height: 1.3; color: rgba(255, 255, 255, 0.92); }
+.reveal .zi-title .authors { margin: 28px 0 0; font-size: 22px; font-weight: 600; line-height: 1.3; color: #FFFFFF; }
+.reveal .zi-title .authors + .authors { margin-top: 4px; }
+.reveal .zi-title .affiliation { margin: 2px 0 0; font-size: 18px; font-weight: 400; color: rgba(255, 255, 255, 0.88); }
+.reveal .zi-title .date { margin: 6px 0 0; font-size: 18px; line-height: 1.3; color: rgba(255, 255, 255, 0.88); }
+
+.zi-title .ts-hero-right { position: relative; padding: 34px 44px 34px 0; box-sizing: border-box; min-height: 0; }
+.reveal .zi-title .ts-hero-right img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.reveal .zi-title .ts-hero-right .credit {
+  position: absolute; left: 12px; bottom: 40px; margin: 0; font-size: 14px; color: #FFFFFF;
+}
+
+.zi-title .ts-footer {
+  position: relative; height: 176px; box-sizing: border-box; padding: 16px 44px 0 60px;
+  display: flex; align-items: flex-start; justify-content: space-between;
+}
+.zi-title .ts-group { display: flex; flex-direction: column; }
+.reveal .zi-title .ts-label { height: 18px; margin: 0 0 12px; font-size: 13px; line-height: 18px; color: var(--zi-ink); }
+.zi-title .ts-logos { display: flex; align-items: center; gap: 34px; height: 70px; }
+.zi-title .ts-right { display: flex; align-items: flex-start; gap: 44px; }
+.reveal .zi-title .lg-kassel      { height: 22px; }
+.reveal .zi-title .lg-giessen     { height: 38px; }
+.reveal .zi-title .lg-geisenheim  { height: 50px; }
+.reveal .zi-title .lg-leibniz     { height: 60px; }
+.reveal .zi-title .lg-bmel        { height: 60px; }
+.reveal .zi-title .lg-brandenburg { height: 68px; }
+.reveal .zi-title .lg-hessen      { height: 64px; }
+.reveal .zi-title .ts-ai { position: absolute; left: 60px; bottom: 12px; margin: 0; font-size: 12px; color: var(--zi-gray); }
+
+/* -- reveal.js chrome ---------------------------------------- */
+
+/* Bottom left: the corner mark owns the bottom right. */
+.reveal .slide-number {
+  left: 24px; right: auto; bottom: 16px; padding: 0; background: none;
+  font-family: var(--zi-font); font-size: 16px; color: var(--zi-gray);
+}
+.reveal:has(.slides > section.present:is(.zi-divider, .zi-closing)) .slide-number { color: rgba(255, 255, 255, 0.7); }
+.reveal .slide-number a { text-decoration: none; color: inherit; }
+.reveal .progress { height: 4px; color: var(--zi-teal-dark); }
+.reveal .slide-menu-button, .reveal .slide-chalkboard-buttons { display: none; }

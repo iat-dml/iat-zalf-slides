@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+evals/results/
+*-workspace/
+REVIEW.md
+review-shots/

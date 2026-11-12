@@ -1,0 +1,71 @@
+<section id="$idprefix$title-slide"$for(title-slide-attributes/pairs)$ $it.key$="$it.value$"$endfor$ class="quarto-title-block zi-title">
+  <script>
+    document.documentElement.setAttribute("data-brand", "$deck-brand$");
+    document.documentElement.setAttribute("data-audience", "$deck-audience$");
+  </script>
+  <div class="ts-header">
+    <div class="ts-institution">
+      <span class="l-en">Leibniz Centre for Agricultural Landscape Research (ZALF)</span>
+      <span class="l-de">Leibniz-Zentrum f&uuml;r Agrarlandschaftsforschung (ZALF) e.&nbsp;V.</span>
+    </div>
+    <img class="ts-logo only-iat" src="_extensions/zalf-iat/assets/zalf-iat.png" alt="ZALF IAT">
+    <img class="ts-logo only-zalf" src="_extensions/zalf-iat/assets/zalf.png" alt="ZALF">
+  </div>
+  <div class="ts-hero$if(title-image)$$else$ no-image$endif$">
+    <div class="ts-panel">
+      <h1 class="title">$title$</h1>
+$if(subtitle)$
+      <p class="subtitle">$subtitle$</p>
+$endif$
+$for(by-author)$
+      <p class="authors">$by-author.name.literal$</p>
+$for(by-author.affiliations)$
+      <p class="affiliation">$it.name$</p>
+$endfor$
+$endfor$
+$if(deck-date)$
+      <p class="date">$deck-date$</p>
+$else$
+$if(date)$
+      <p class="date">$date$</p>
+$endif$
+$endif$
+    </div>
+$if(title-image)$
+    <div class="ts-hero-right">
+      <img src="$title-image$" alt="">
+$if(title-image-credit)$
+      <p class="credit">$title-image-credit$</p>
+$endif$
+    </div>
+$endif$
+  </div>
+  <div class="ts-footer">
+    <div class="ts-group only-iat">
+      <p class="ts-label"><span class="l-en">IAT partners:</span><span class="l-de">IAT-Partner:</span></p>
+      <div class="ts-logos">
+        <img class="lg-kassel" src="_extensions/zalf-iat/assets/partners/kassel.png" alt="Universität Kassel">
+        <img class="lg-giessen" src="_extensions/zalf-iat/assets/partners/giessen.png" alt="Justus-Liebig-Universität Gießen">
+        <img class="lg-geisenheim" src="_extensions/zalf-iat/assets/partners/geisenheim.png" alt="Hochschule Geisenheim University">
+      </div>
+    </div>
+    <div class="ts-group only-zalf"></div>
+    <div class="ts-right">
+      <div class="ts-group only-iat">
+        <p class="ts-label">&nbsp;</p>
+        <div class="ts-logos"><img class="lg-leibniz" src="_extensions/zalf-iat/assets/leibniz.png" alt="Leibniz-Gemeinschaft"></div>
+      </div>
+      <div class="ts-group only-external">
+        <p class="ts-label"><span class="l-en">Funded by:</span><span class="l-de">Gef&ouml;rdert durch:</span></p>
+        <div class="ts-logos">
+          <img class="lg-bmel" src="_extensions/zalf-iat/assets/funders/bmel.png" alt="Federal Ministry of Agriculture, Food and Regional Identity">
+          <img class="lg-brandenburg" src="_extensions/zalf-iat/assets/funders/brandenburg.png" alt="Land Brandenburg">
+          <img class="lg-hessen only-iat" src="_extensions/zalf-iat/assets/funders/hessen.png" alt="Land Hessen">
+        </div>
+      </div>
+    </div>
+$if(ai-note)$
+    <p class="ts-ai"><span class="l-en">Presentation created with the assistance of Claude</span><span class="l-de">Pr&auml;sentation mit Unterst&uuml;tzung von Claude erstellt</span></p>
+$endif$
+  </div>
+</section>

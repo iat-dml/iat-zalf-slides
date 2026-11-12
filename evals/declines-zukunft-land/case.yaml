@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: declines-zukunft-land
+expected_outcome: |
+  The assistant says the Zukunft Land design is not available in this skill yet, offers the IAT or ZALF design instead, and does not invent a Zukunft Land look.

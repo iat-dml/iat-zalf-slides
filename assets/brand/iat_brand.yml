@@ -1,0 +1,78 @@
+﻿meta:
+  name:
+    short: IAT
+    full: Innovation Centre for Agricultural System Transformation (IAT)
+  link:
+    home: https://www.zalf.de/en/struktur/iat/Pages/default.aspx
+
+logo:
+  images:
+    logo-iat:
+      path: logos/logo-iat.png
+      alt: "IAT – Innovation Centre for Agricultural System Transformation"
+  medium: logo-iat
+  large: logo-iat
+  small: logo-iat
+
+color:
+  palette:
+    # Primary greens
+    green:           "#46A84F"   # Primary green
+    green-light:     "#9EBC83"   # Light green
+    green-mid:       "#80BDBD"   # Mid teal-green
+    # Teal family
+    teal:            "#36AE6C"   # Secondary green
+    teal-dark:       "#356259"   # Dark teal — primary brand colour
+    # Accents
+    olive:           "#B1BE4D"   # Olive / yellow-green
+    sage:            "#657A4E"   # Sage green
+    # Service colours
+    transfer:        "#458484"   # Teal-blue for transfer activities
+    support:         "#2D6A4F"   # Dark green for support activities
+    integration:     "#C18F59"   # Terracotta for integration activities
+    # Neutrals
+    slate:           "#465555"   # Dark slate (text)
+    white:           "#FFFFFF"
+    black:           "#1A1A1A"
+    paper:           "#F5F3EE"   # Warm off-white body background
+    gray-light:      "#F5F5F5"
+    gray:            "#6C6C6C"
+  # Semantic assignments
+  foreground:  slate
+  background:  white
+  primary:     teal-dark
+  secondary:   teal
+  tertiary:    teal
+  success:     teal-dark
+  info:        green-mid
+  warning:     olive
+  danger:      "#C0392B"
+  light:       paper
+  dark:        slate
+
+typography:
+  fonts:
+    - family: "Segoe UI"
+      source: system
+    - family: "Segoe UI Mono"
+      source: system
+  base:
+    family: "Segoe UI, system-ui, Helvetica Neue, Arial, sans-serif"
+    weight: 400
+    size: 10pt
+    line-height: 1.5
+  headings:
+    family: "Segoe UI, system-ui, Helvetica Neue, Arial, sans-serif"
+    weight: 600
+    color: teal-dark
+    line-height: 1.25
+  monospace:
+    family: "Segoe UI Mono, ui-monospace, Consolas, monospace"
+    weight: 400
+    size: 0.9em
+  monospace-inline:
+    background-color: gray-light
+  link:
+    color: primary
+    weight: 600
+    decoration: underline

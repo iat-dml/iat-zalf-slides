@@ -1,0 +1,87 @@
+meta:
+  name:
+    short: ZALF
+    full: Leibniz Centre for Agricultural Landscape Research (ZALF)
+  link:
+    home: https://www.zalf.de/en/Pages/ZALF.aspx
+    github: https://github.com/iat-dml
+    linkedin: https://www.linkedin.com/company/zalf
+    twitter: https://twitter.com/ZALF_Muencheberg
+
+logo:
+  images:
+    logo-zalf:
+      path: assets/logo-zalf.png
+      alt: "ZALF – Leibniz Centre for Agricultural Landscape Research"
+    logo-leibniz:
+      path: assets/logo-leibniz.png
+      alt: "Leibniz Association"
+  medium: logo-zalf
+  large: logo-zalf
+  small: logo-zalf
+
+color:
+  palette:
+    # Primary greens
+    green:           "#46A84F"   # Primary ZALF green
+    green-light:     "#9EBC83"   # Light green
+    green-mid:       "#80BDBD"   # Mid teal-green
+    # Teal family
+    teal:            "#36AE6C"   # ZALF teal / secondary green
+    teal-dark:       "#356259"   # Dark teal
+    # Accent
+    olive:           "#B1BE4D"   # Olive / yellow-green
+    sage:            "#657A4E"   # Sage green
+    # Neutrals
+    slate:           "#465555"   # Dark slate (text)
+    white:           "#FFFFFF"
+    black:           "#000000"
+    gray-light:      "#F5F5F5"
+    gray-rule:       "#CCCCCC"
+    gray-text:       "#888888"
+    gray-bg:         "#E8E8E8"
+  # Semantic assignments
+  foreground:  black
+  background:  white
+  primary:     green
+  secondary:   teal
+  tertiary:    green-light
+  success:     green
+  info:        green-mid
+  warning:     olive
+  danger:      "#C0392B"
+  light:       gray-light
+  dark:        slate
+
+typography:
+  fonts:
+    # Segoe UI is the ZALF standard font (zalf-internal-theme.typ).
+    # It is a Microsoft system font — resolves automatically on Windows.
+    # On macOS/Linux the fallback stack below keeps web/Shiny output clean.
+    # For Typst rendering, Segoe UI must be available on the local system
+    # or in the Typst font path.
+    - family: "Segoe UI"
+      source: system
+    - family: "Segoe UI Mono"
+      source: system
+  base:
+    family: "Segoe UI, system-ui, Helvetica Neue, Arial, sans-serif"
+    weight: 400
+    size: 10pt
+    line-height: 1.5
+  headings:
+    # H1–H3 use semibold Segoe UI in zalf-green per zalf-internal-theme.typ
+    family: "Segoe UI, system-ui, Helvetica Neue, Arial, sans-serif"
+    weight: 600
+    color: green
+    line-height: 1.25
+  monospace:
+    family: "Segoe UI Mono, ui-monospace, Consolas, monospace"
+    weight: 400
+    size: 0.9em
+  monospace-inline:
+    background-color: gray-light
+  link:
+    color: primary
+    weight: 600
+    decoration: underline

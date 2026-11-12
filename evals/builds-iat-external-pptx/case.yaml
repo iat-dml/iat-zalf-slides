@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: builds-iat-external-pptx
+expected_outcome: |
+  A .pptx built with scripts/pptx_deck.py on the IAT template, in English, with funder logos on the title slide, five to seven slides, every figure taken from CONTEXT.md, and the linter reporting no FAIL.
+context:
+  scaffold_script: place-files.sh
