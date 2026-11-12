@@ -107,4 +107,22 @@ markup exists twice (`_extensions/zalf-iat/title-slide.html` for Quarto and
   `logo-zukunft-land.png` in `templates/zalf-poster-typst`.
 - **IAT background and glossary.** `SKILL.md` refers to a future skill; update the name there
   once it exists.
-- **Licence.** None chosen yet. The logos belong to their institutions.
+
+## Licence
+
+Copyright © 2026 Leibniz Centre for Agricultural Landscape Research (ZALF) e. V.
+
+The code and documentation in this repository are released under the MIT licence
+(see `LICENSE`), with the exceptions below.
+
+**Third-party code.** `assets/revealjs/plain/vendor/reveal/` contains reveal.js 5.1.0,
+© 2011–2024 Hakim El Hattab, under the MIT licence (see the `LICENSE` file there).
+
+**Not covered by this licence.** The logos in `assets/logos/` and
+`assets/revealjs/_extensions/zalf-iat/assets/` (ZALF, ZALF-IAT, Leibniz Association,
+Universität Kassel, Justus-Liebig-Universität Gießen, Hochschule Geisenheim University,
+the Federal Ministry of Agriculture, Food and Regional Identity, Land Brandenburg and
+Land Hessen), the PowerPoint templates in `assets/pptx/`, and the title-slide artwork
+(`title-background-block.png`) are trademarks, official emblems or copyrighted works of
+their owners. They are included only so that decks made by these institutions follow
+their corporate design. No rights to them are granted. Do not use them for any other purpose.
