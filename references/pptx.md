@@ -22,7 +22,7 @@ from pptx_deck import Deck, BODY, PALETTE, CHART_COLORS
 deck = Deck(brand="iat", lang="en", audience="external")     # brand: iat | zalf
 
 deck.title_slide(
-    "Soil moisture across three living labs",
+    "Soil moisture across three Living Labs",
     subtitle="First season of sensor data, March to October 2026",
     authors=["Dr. A. Example", "B. Example"],
     date="12.11.2026", event="IAT Statusseminar",
