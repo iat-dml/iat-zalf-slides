@@ -44,8 +44,9 @@ glossaries, Quarto and brand configuration, and bibliography files from the work
 directory up to the repository root. Read `CONTEXT.md` and `README.md` and whatever else the
 deck needs. They hold the project's aims, facts and vocabulary; use its terms, not synonyms.
 
-If a skill with background on the IAT and its glossary is available (for example one named
-`iat-background` or `iat-glossary`), consult it for institutional facts and preferred terms.
+If the `iat-reference/` folder of the iat-dml/knowledge-management repo is available (locally,
+for example `C:/git/knowledge-management/iat-reference/`), read `iat-background.md`, `glossary.md` and
+`writing-style.md` there for institutional facts, preferred terms and general writing rules.
 If it is not, do not fill the gap from general knowledge: use the context files and ask the
 user for anything missing.
 

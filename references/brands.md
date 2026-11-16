@@ -9,7 +9,7 @@ a brand and for composing slide content that fits it.
 
 | Design | Use for |
 |---|---|
-| **IAT** | Work of the IAT: its projects, living labs, service working groups, partner universities |
+| **IAT** | Work of the IAT: its projects, Living Labs, service working groups, partner universities |
 | **ZALF** | Institute-wide topics, other ZALF research areas, committees and central services |
 | **Zukunft Land** | IAT's public-facing platform for non-scientists. **Not available yet.** Tell the user, and offer IAT or ZALF. Do not improvise a Zukunft Land look from the logo. |
 

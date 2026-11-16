@@ -11,7 +11,7 @@ A content slide's title states what the slide shows, as a short sentence in sent
 | Instead of | Write |
 |---|---|
 | Results | Yield variance doubled on sandy sites after 2022 |
-| Our approach | Three living labs share one sampling protocol |
+| Our approach | Three Living Labs share one sampling protocol |
 | Datenmanagement | Alle Projektdaten liegen seit Mai im gemeinsamen Katalog |
 | The challenge | 14 of 31 projects have no data management plan |
 
@@ -46,14 +46,15 @@ all such markers for the user at the end.
 - British spelling, as in ZALF's own usage: Centre, modelling, visualisation, programme,
   organise.
 - Sentence case for all headings.
-- "living lab" in lower case unless part of a name; "Living Lab Explorer" as a product name.
+- "Living Lab" always capitalised, as a proper noun; lower case only inside an official name that
+  writes it so. "Living Lab Explorer" as a product name.
 - Decimal point, thin or no thousands separator in running text ("12 400 ha" or "12,400 ha",
   consistently), a space before units, "%" closed up or spaced consistently.
 
 ## German
 
 - Sachlicher Stil, Sie-Form wo eine Anrede nötig ist. Keine Werbesprache.
-- Etablierte deutsche Fachbegriffe statt Anglizismen: Reallabor (für living lab, sofern das
+- Etablierte deutsche Fachbegriffe statt Anglizismen: Reallabor (für Living Lab, sofern das
   Projekt es so verwendet), Forschungsdatenmanagement, Datenmanagementplan, Arbeitsgruppe.
   Englische Eigennamen und Produktnamen bleiben englisch.
 - Überschriften in normaler Groß- und Kleinschreibung, kein Punkt am Ende.
